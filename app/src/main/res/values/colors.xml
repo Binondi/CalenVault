@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material 3 Palette: Deep Indigo & Clean Teal -->
+    <color name="md_theme_light_primary">#3F51B5</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#DEE0FF</color>
+    <color name="md_theme_light_onPrimaryContainer">#00105C</color>
+    <color name="md_theme_light_secondary">#00897B</color>
+    <color name="md_theme_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_light_secondaryContainer">#A7F3D0</color>
+    <color name="md_theme_light_onSecondaryContainer">#00201A</color>
+    <color name="md_theme_light_background">#F8F9FE</color>
+    <color name="md_theme_light_onBackground">#191C20</color>
+    <color name="md_theme_light_surface">#FFFFFF</color>
+    <color name="md_theme_light_onSurface">#191C20</color>
+    <color name="md_theme_light_surfaceVariant">#E2E2EC</color>
+    <color name="md_theme_light_onSurfaceVariant">#44474F</color>
+    <color name="md_theme_light_outline">#757780</color>
+    <color name="md_theme_light_outlineVariant">#C5C6D0</color>
+    <color name="md_theme_light_error">#BA1A1A</color>
+    <color name="md_theme_light_onError">#FFFFFF</color>
+
+    <!-- Dark Theme Palette -->
+    <color name="md_theme_dark_primary">#BAC3FF</color>
+    <color name="md_theme_dark_onPrimary">#08218A</color>
+    <color name="md_theme_dark_primaryContainer">#25389D</color>
+    <color name="md_theme_dark_onPrimaryContainer">#DEE0FF</color>
+    <color name="md_theme_dark_secondary">#4EDBC5</color>
+    <color name="md_theme_dark_onSecondary">#00382E</color>
+    <color name="md_theme_dark_secondaryContainer">#005144</color>
+    <color name="md_theme_dark_onSecondaryContainer">#A7F3D0</color>
+    <color name="md_theme_dark_background">#111318</color>
+    <color name="md_theme_dark_onBackground">#E2E2E6</color>
+    <color name="md_theme_dark_surface">#191C20</color>
+    <color name="md_theme_dark_onSurface">#E2E2E6</color>
+    <color name="md_theme_dark_surfaceVariant">#44474F</color>
+    <color name="md_theme_dark_onSurfaceVariant">#C5C6D0</color>
+    <color name="md_theme_dark_outline">#8E909A</color>
+    <color name="md_theme_dark_outlineVariant">#44474F</color>
+    <color name="md_theme_dark_error">#FFB4AB</color>
+    <color name="md_theme_dark_onError">#690005</color>
+
+    <!-- Category Palette (Vibrant, accessible) -->
+    <color name="category_work">#2563EB</color>
+    <color name="category_work_light">#DBEAFE</color>
+    <color name="category_personal">#059669</color>
+    <color name="category_personal_light">#D1FAE5</color>
+    <color name="category_meeting">#D97706</color>
+    <color name="category_meeting_light">#FEF3C7</color>
+    <color name="category_reminder">#DC2626</color>
+    <color name="category_reminder_light">#FEE2E2</color>
+    <color name="category_health">#7C3AED</color>
+    <color name="category_health_light">#EDE9FE</color>
+    <color name="category_other">#4B5563</color>
+    <color name="category_other_light">#F3F4F6</color>
+
+    <!-- UI Helpers -->
+    <color name="calendar_day_selected">#3F51B5</color>
+    <color name="calendar_day_today_stroke">#3F51B5</color>
+    <color name="calendar_day_other_month">#9E9E9E</color>
+    <color name="calendar_day_weekend">#EF4444</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="whiteBg">#ffffff</color>
+    <color name="textColor">#000000</color>
+    <color name="textColorDescription">#424242</color>
+    <color name="primary">#226A4D</color>
+    <color name="buttonGray">#212121</color>
+    <color name="colorPrimaryVariant">#33AF6E</color>
+    <color name="colorSecondary">#4D6357</color>
+    <color name="svgTintColor">#000000</color>
+    <color name="md_theme_error">#BA1A1A</color>
+    <color name="md_theme_onError">#FFFFFF</color>
+    <color name="md_theme_errorContainer">#FFDAD6</color>
+    <color name="md_theme_onErrorContainer">#93000A</color>
+    <color name="permission_green">#10B981</color>
+    <color name="permission_green_container">#D1FAE5</color>
+</resources>

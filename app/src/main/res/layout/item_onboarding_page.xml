@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="24dp">
+
+        <!-- Hero Icon Badge -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardIcon"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="?attr/colorPrimaryContainer"
+            app:cardCornerRadius="36dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <ImageView
+                android:id="@+id/ivHeroIcon"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_launcher_foreground"
+                app:tint="?attr/colorOnPrimaryContainer" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Tag / Category Pill -->
+        <TextView
+            android:id="@+id/tvTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/tab_indicator_pill"
+            android:backgroundTint="?attr/colorSurfaceContainerHigh"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="5dp"
+            android:text="STEALTH DISGUISE"
+            android:textAllCaps="true"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="A Real Calendar on the Surface"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.25"
+            android:text="Operates as a fully functional standard and scientific calendar for everyday use. No one will ever suspect it is a hidden vault."
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="14sp" />
+
+        <!-- Feature Highlights Card (For Standard Pages) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardHighlights"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="?attr/colorSurfaceContainerHigh"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Highlight 1 -->
+                <LinearLayout
+                    android:id="@+id/layoutHighlight1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/baseline_done"
+                        app:tint="?attr/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tvHighlight1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:text="Real calculation engine with history support"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- Divider -->
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/dividerHighlight1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    app:dividerColor="?attr/colorOutlineVariant" />
+
+                <!-- Highlight 2 -->
+                <LinearLayout
+                    android:id="@+id/layoutHighlight2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/baseline_done"
+                        app:tint="?attr/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tvHighlight2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:text="Standard &amp; scientific modes"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- Divider -->
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/dividerHighlight2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    app:dividerColor="?attr/colorOutlineVariant" />
+
+                <!-- Highlight 3 -->
+                <LinearLayout
+                    android:id="@+id/layoutHighlight3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/baseline_done"
+                        app:tint="?attr/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tvHighlight3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:text="Complete stealth—no vault traces on home screen"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Access Visual Mock Card (For Trigger Pages) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardVisualMock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:cardBackgroundColor="?attr/colorSurfaceContainerHigh"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="?attr/colorOutlineVariant">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center_horizontal">
+
+                <!-- Visual 1: Search Bar Mockup -->
+                <LinearLayout
+                    android:id="@+id/layoutVisualSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CALENDAR SEARCH BAR"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.1"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOutline"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Simulated Search Box -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_search_box"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="12dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_search"
+                            app:tint="?attr/colorPrimary"
+                            android:contentDescription="Search" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="10dp"
+                            android:text="1 2 3 4"
+                            android:letterSpacing="0.25"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="?attr/colorOnSurface" />
+
+                        <!-- Enter / Search Pill Button -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/tab_indicator_pill"
+                            android:backgroundTint="?attr/colorPrimary"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="↵ Search"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <!-- Downward Flow Arrow -->
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginVertical="10dp"
+                        android:src="@drawable/baseline_done"
+                        app:tint="?attr/colorPrimary"
+                        android:contentDescription="Next" />
+
+                    <!-- Result Badge -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tab_indicator_pill"
+                        android:backgroundTint="?attr/colorPrimaryContainer"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_key"
+                            app:tint="?attr/colorOnPrimaryContainer"
+                            android:contentDescription="Unlocked" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Secret Vault Unlocks Instantly"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimaryContainer"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Visual 2: Long-Press Calendar Title Mockup -->
+                <LinearLayout
+                    android:id="@+id/layoutVisualLongPress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CALENDAR HEADER BAR"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.1"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOutline"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Simulated Top Bar -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="@drawable/bg_search_box"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="14dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Calender"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="?attr/colorOnSurface" />
+
+                        <!-- Finger touch badge indicator -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/tab_indicator_pill"
+                            android:backgroundTint="?attr/colorPrimaryContainer"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_touch_gesture"
+                                app:tint="?attr/colorOnPrimaryContainer"
+                                android:contentDescription="Touch" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:text="Hold 2.5s"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorOnPrimaryContainer"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Downward Flow Arrow -->
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginVertical="10dp"
+                        android:src="@drawable/baseline_done"
+                        app:tint="?attr/colorPrimary"
+                        android:contentDescription="Next" />
+
+                    <!-- Result Badge -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tab_indicator_pill"
+                        android:backgroundTint="?attr/colorPrimaryContainer"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_mobile_vibrate"
+                            app:tint="?attr/colorOnPrimaryContainer"
+                            android:contentDescription="Vibrate" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Vibrates &amp; Opens PIN Dialog"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimaryContainer"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Visual 3: Multi-Tap Today Button Mockup -->
+                <LinearLayout
+                    android:id="@+id/layoutVisualMultiTap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CALENDAR TODAY BUTTON"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.1"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOutline"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Simulated Today Button Bar -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="@drawable/bg_search_box"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="14dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/tab_indicator_pill"
+                            android:backgroundTint="?attr/colorSurface"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="6dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_today"
+                                app:tint="?attr/colorPrimary"
+                                android:contentDescription="Today" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:text="Today"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorOnSurface"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <!-- Tap sequence circles -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end|center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:background="@drawable/bg_tap_badge"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorOnPrimaryContainer" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="›"
+                                android:textColor="?attr/colorOutline"
+                                android:layout_marginHorizontal="2dp" />
+
+                            <TextView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:background="@drawable/bg_tap_badge"
+                                android:gravity="center"
+                                android:text="2"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorOnPrimaryContainer" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="›"
+                                android:textColor="?attr/colorOutline"
+                                android:layout_marginHorizontal="2dp" />
+
+                            <TextView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:background="@drawable/bg_tap_badge"
+                                android:gravity="center"
+                                android:text="3"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorOnPrimaryContainer" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="›"
+                                android:textColor="?attr/colorOutline"
+                                android:layout_marginHorizontal="2dp" />
+
+                            <TextView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:background="@drawable/bg_tap_badge"
+                                android:backgroundTint="?attr/colorPrimary"
+                                android:gravity="center"
+                                android:text="4"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorOnPrimary" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Downward Flow Arrow -->
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginVertical="10dp"
+                        android:src="@drawable/baseline_done"
+                        app:tint="?attr/colorPrimary"
+                        android:contentDescription="Next" />
+
+                    <!-- Result Badge -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tab_indicator_pill"
+                        android:backgroundTint="?attr/colorPrimaryContainer"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_key"
+                            app:tint="?attr/colorOnPrimaryContainer"
+                            android:contentDescription="Prompt" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="4 Taps Reveals PIN Dialog"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimaryContainer"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Switch Card (For Trigger Pages) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="?attr/colorSurfaceContainerHigh"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="?attr/colorOutlineVariant">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSwitchTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enable This Access Method"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="?attr/colorOnSurface" />
+
+                    <TextView
+                        android:id="@+id/tvSwitchSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Active — allows opening vault"
+                        android:textSize="12sp"
+                        android:textColor="?attr/colorOutline" />
+                </LinearLayout>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchTrigger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

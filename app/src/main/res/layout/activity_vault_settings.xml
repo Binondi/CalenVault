@@ -1,0 +1,1216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context=".vault.activities.VaultSettingsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            app:contentScrim="?attr/colorSurface"
+            style="@style/appBar_settings"
+            app:title="@string/settings" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="32dp">
+
+            <!-- Section 1: Security Settings -->
+            <TextView
+                style="@style/sectionText"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/security_settings" />
+
+            <!-- Section: Disguise & Access Methods -->
+            <TextView
+                style="@style/sectionText"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/vault_trigger_category_title" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="?attr/colorOutlineVariant"
+                app:cardBackgroundColor="?attr/colorSurface">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Option: Search Bar Passcode -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/optionLayout"
+                        android:padding="16dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/searchTriggerIconBg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp"
+                            app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                app:tint="?attr/colorOnPrimaryContainer"
+                                app:srcCompat="@drawable/ic_search" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/searchTriggerTitle"
+                            style="@style/optionTitleText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="0dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:text="@string/vault_trigger_search_title"
+                            app:layout_constraintEnd_toStartOf="@id/searchTriggerSwitch"
+                            app:layout_constraintStart_toEndOf="@id/searchTriggerIconBg"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/optionDescriptionText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="0dp"
+                            android:textSize="13sp"
+                            android:text="@string/vault_trigger_search_desc"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/searchTriggerSwitch"
+                            app:layout_constraintStart_toEndOf="@id/searchTriggerIconBg"
+                            app:layout_constraintTop_toBottomOf="@id/searchTriggerTitle" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/searchTriggerSwitch"
+                            style="@style/optionSwitch"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="68dp"
+                        android:background="?attr/colorOutlineVariant" />
+
+                    <!-- Option: Long-Press Calendar Title -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/optionLayout"
+                        android:padding="16dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/longPressTriggerIconBg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp"
+                            app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                app:tint="?attr/colorOnPrimaryContainer"
+                                app:srcCompat="@drawable/ic_calendar" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/longPressTriggerTitle"
+                            style="@style/optionTitleText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="0dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:text="@string/vault_trigger_title_longpress_title"
+                            app:layout_constraintEnd_toStartOf="@id/longPressTriggerSwitch"
+                            app:layout_constraintStart_toEndOf="@id/longPressTriggerIconBg"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/optionDescriptionText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="0dp"
+                            android:textSize="13sp"
+                            android:text="@string/vault_trigger_title_longpress_desc"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/longPressTriggerSwitch"
+                            app:layout_constraintStart_toEndOf="@id/longPressTriggerIconBg"
+                            app:layout_constraintTop_toBottomOf="@id/longPressTriggerTitle" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/longPressTriggerSwitch"
+                            style="@style/optionSwitch"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="68dp"
+                        android:background="?attr/colorOutlineVariant" />
+
+                    <!-- Option: Multi-Tap Today Button -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/optionLayout"
+                        android:padding="16dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/multiTapTriggerIconBg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp"
+                            app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                app:tint="?attr/colorOnPrimaryContainer"
+                                app:srcCompat="@drawable/ic_today" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/multiTapTriggerTitle"
+                            style="@style/optionTitleText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="0dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:text="@string/vault_trigger_today_multitap_title"
+                            app:layout_constraintEnd_toStartOf="@id/multiTapTriggerSwitch"
+                            app:layout_constraintStart_toEndOf="@id/multiTapTriggerIconBg"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/optionDescriptionText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="0dp"
+                            android:textSize="13sp"
+                            android:text="@string/vault_trigger_today_multitap_desc"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/multiTapTriggerSwitch"
+                            app:layout_constraintStart_toEndOf="@id/multiTapTriggerIconBg"
+                            app:layout_constraintTop_toBottomOf="@id/multiTapTriggerTitle" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/multiTapTriggerSwitch"
+                            style="@style/optionSwitch"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="?attr/colorOutlineVariant"
+                app:cardBackgroundColor="?attr/colorSurface">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Option 1: Restrict Screenshots -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/optionLayout"
+                        android:padding="16dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/screenshotIconBg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp"
+                            app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/screenshotImage"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                app:tint="?attr/colorOnPrimaryContainer"
+                                app:srcCompat="@drawable/ic_fullscreen" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/screenshotTitleText"
+                            style="@style/optionTitleText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="0dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:text="@string/restrict_screenshots_in_hidden_section"
+                            app:layout_constraintEnd_toStartOf="@id/screenshotRestrictionSwitch"
+                            app:layout_constraintStart_toEndOf="@id/screenshotIconBg"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/optionDescriptionText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="0dp"
+                            android:textSize="13sp"
+                            android:text="@string/prevents_capturing_screen_inside_the_app"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/screenshotRestrictionSwitch"
+                            app:layout_constraintStart_toEndOf="@id/screenshotIconBg"
+                            app:layout_constraintTop_toBottomOf="@id/screenshotTitleText" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/screenshotRestrictionSwitch"
+                            style="@style/optionSwitch"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="68dp"
+                        android:background="?attr/colorOutlineVariant" />
+
+                    <!-- Option 2: AES Encryption -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/optionLayout"
+                        android:padding="16dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/encryptionIconBg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp"
+                            app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/encryptionImage"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                app:tint="?attr/colorOnPrimaryContainer"
+                                app:srcCompat="@drawable/ic_encrypted" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/encryptionTitleText"
+                            style="@style/optionTitleText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="0dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:text="@string/encrypt_file_when_hiding"
+                            app:layout_constraintEnd_toStartOf="@id/encryptionSwitch"
+                            app:layout_constraintStart_toEndOf="@id/encryptionIconBg"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/optionDescriptionText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="0dp"
+                            android:textSize="13sp"
+                            android:text="@string/secure_files_using_aes_encryption"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/encryptionSwitch"
+                            app:layout_constraintStart_toEndOf="@id/encryptionIconBg"
+                            app:layout_constraintTop_toBottomOf="@id/encryptionTitleText" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/encryptionSwitch"
+                            style="@style/optionSwitch"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="68dp"
+                        android:background="?attr/colorOutlineVariant" />
+
+                    <!-- Option 3: Encryption Key -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/customKeyStatusLayout"
+                        style="@style/optionLayout"
+                        android:padding="16dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/customKeyIconBg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp"
+                            app:cardBackgroundColor="?attr/colorSecondaryContainer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/customKeyImage"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                app:tint="?attr/colorOnSecondaryContainer"
+                                app:srcCompat="@drawable/ic_key" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/customKeyTitleText"
+                            style="@style/optionTitleText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="0dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:text="@string/encryption_key_title"
+                            app:layout_constraintEnd_toStartOf="@id/customKeyArrow"
+                            app:layout_constraintStart_toEndOf="@id/customKeyIconBg"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/customKeyDescriptionText"
+                            style="@style/optionDescriptionText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="0dp"
+                            android:textSize="13sp"
+                            android:text="@string/no_key_configured"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/customKeyArrow"
+                            app:layout_constraintStart_toEndOf="@id/customKeyIconBg"
+                            app:layout_constraintTop_toBottomOf="@id/customKeyTitleText" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/customKeyArrow"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_arrow_forward"
+                            app:tint="?attr/colorOutline" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="68dp"
+                        android:background="?attr/colorOutlineVariant" />
+
+                    <!-- Option 3b: Migrate Encryption -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/migrateEncryptionLayout"
+                        style="@style/optionLayout"
+                        android:padding="16dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/migrateIconBg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp"
+                            app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/migrateImage"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                app:tint="?attr/colorOnPrimaryContainer"
+                                app:srcCompat="@drawable/ic_privacy_tip" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/migrateTitleText"
+                            style="@style/optionTitleText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="0dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:text="@string/migrate_encryption_title"
+                            app:layout_constraintEnd_toStartOf="@id/migrateArrow"
+                            app:layout_constraintStart_toEndOf="@id/migrateIconBg"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/optionDescriptionText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="0dp"
+                            android:textSize="13sp"
+                            android:text="@string/migrate_encryption_summary"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/migrateArrow"
+                            app:layout_constraintStart_toEndOf="@id/migrateIconBg"
+                            app:layout_constraintTop_toBottomOf="@id/migrateTitleText" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/migrateArrow"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            app:tint="?attr/colorOnSurfaceVariant"
+                            app:srcCompat="@drawable/ic_arrow_forward"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="68dp"
+                        android:background="?attr/colorOutlineVariant" />
+
+                    <!-- Option 4: Change Password -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/changePassLayout"
+                        style="@style/optionLayout"
+                        android:padding="16dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/changePassIconBg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp"
+                            app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/changePassImage"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                app:tint="?attr/colorOnPrimaryContainer"
+                                app:srcCompat="@drawable/ic_key" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/changePassTitleText"
+                            style="@style/optionTitleText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="0dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:text="@string/change_password"
+                            app:layout_constraintEnd_toStartOf="@id/changePassArrow"
+                            app:layout_constraintStart_toEndOf="@id/changePassIconBg"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/optionDescriptionText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="0dp"
+                            android:textSize="13sp"
+                            android:text="@string/click_here_to_change_your_hidden_vault_password"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/changePassArrow"
+                            app:layout_constraintStart_toEndOf="@id/changePassIconBg"
+                            app:layout_constraintTop_toBottomOf="@id/changePassTitleText" />
+
+                        <ImageView
+                            android:id="@+id/changePassArrow"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_arrow_forward"
+                            app:tint="?attr/colorOutline"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:contentDescription="@null" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section 2: App Settings -->
+            <TextView
+                style="@style/sectionText"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/app_settings" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="?attr/colorOutlineVariant"
+                app:cardBackgroundColor="?attr/colorSurface">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <!-- Option: Go to Calculator -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    style="@style/optionLayout"
+                    android:padding="16dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/gotomainIconBg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="0dp"
+                        app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/gotomainImage"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            app:tint="?attr/colorOnPrimaryContainer"
+                            app:srcCompat="@drawable/ic_privacy_tip" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/gotomainTitleText"
+                        style="@style/optionTitleText"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="0dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="@string/go_to_calculator"
+                        app:layout_constraintEnd_toStartOf="@id/gotomain"
+                        app:layout_constraintStart_toEndOf="@id/gotomainIconBg"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        style="@style/optionDescriptionText"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="0dp"
+                        android:textSize="13sp"
+                        android:text="@string/go_to_main_description"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/gotomain"
+                        app:layout_constraintStart_toEndOf="@id/gotomainIconBg"
+                        app:layout_constraintTop_toBottomOf="@id/gotomainTitleText" />
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/gotomain"
+                        style="@style/optionSwitch"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="68dp"
+                    android:background="?attr/colorOutlineVariant" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/shakeToCloseLayout"
+                    style="@style/optionLayout"
+                    android:padding="16dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/shakeIconBg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="0dp"
+                        app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/shakeImage"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            app:tint="?attr/colorOnPrimaryContainer"
+                            app:srcCompat="@drawable/ic_mobile_vibrate" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/shakeTitleText"
+                        style="@style/optionTitleText"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="0dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="@string/shake_to_close_title"
+                        app:layout_constraintEnd_toStartOf="@id/shakeToCloseSwitch"
+                        app:layout_constraintStart_toEndOf="@id/shakeIconBg"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        style="@style/optionDescriptionText"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="0dp"
+                        android:textSize="13sp"
+                        android:text="@string/shake_to_close_summary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/shakeToCloseSwitch"
+                        app:layout_constraintStart_toEndOf="@id/shakeIconBg"
+                        app:layout_constraintTop_toBottomOf="@id/shakeTitleText" />
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/shakeToCloseSwitch"
+                        style="@style/optionSwitch"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/shakeOptionsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="68dp"
+                        android:background="?attr/colorOutlineVariant" />
+
+                    <!-- Sensitivity Sub-Option -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/shakeSensitivityIconBg"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardElevation="0dp"
+                                app:strokeWidth="0dp"
+                                app:cardBackgroundColor="?attr/colorPrimaryContainer">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/shakeSensitivityImage"
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_gravity="center"
+                                    app:tint="?attr/colorOnPrimaryContainer"
+                                    app:srcCompat="@drawable/ic_tune" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/optionTitleText"
+                                    android:layout_marginStart="14dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/shake_sensitivity_title"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tvShakeSensitivityValue"
+                                    style="@style/optionDescriptionText"
+                                    android:layout_marginStart="14dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:textColor="?attr/colorPrimary"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- Slider Row with start and end icons -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.slider.Slider
+                                android:id="@+id/shakeSensitivitySlider"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="8dp"
+                                android:layout_weight="1"
+                                android:stepSize="1.0"
+                                android:value="3.0"
+                                android:valueFrom="1.0"
+                                android:valueTo="5.0" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="68dp"
+                        android:background="?attr/colorOutlineVariant" />
+
+                    <!-- Vibration Sub-Option -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/optionLayout"
+                        android:padding="16dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/shakeVibrateIconBg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp"
+                            app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/shakeVibrateImage"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                app:tint="?attr/colorOnPrimaryContainer"
+                                app:srcCompat="@drawable/ic_vibration" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/tvShakeVibrateTitle"
+                            style="@style/optionTitleText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="0dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:text="@string/shake_vibrate_title"
+                            app:layout_constraintEnd_toStartOf="@id/shakeVibrateSwitch"
+                            app:layout_constraintStart_toEndOf="@id/shakeVibrateIconBg"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/optionDescriptionText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="0dp"
+                            android:textSize="13sp"
+                            android:text="@string/shake_vibrate_summary"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/shakeVibrateSwitch"
+                            app:layout_constraintStart_toEndOf="@id/shakeVibrateIconBg"
+                            app:layout_constraintTop_toBottomOf="@id/tvShakeVibrateTitle" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/shakeVibrateSwitch"
+                            style="@style/optionSwitch"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section 3: About & Guide -->
+            <TextView
+                style="@style/sectionText"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/about" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="?attr/colorOutlineVariant"
+                app:cardBackgroundColor="?attr/colorSurface">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Option 1: How It Works -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutHowItWorks"
+                        style="@style/optionLayout"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="16dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/howItWorksIconBg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp"
+                            app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                app:tint="?attr/colorOnPrimaryContainer"
+                                app:srcCompat="@drawable/ic_info" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/howItWorksTitleText"
+                            style="@style/optionTitleText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="0dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:text="@string/instructions_title"
+                            app:layout_constraintEnd_toStartOf="@id/howItWorksChevron"
+                            app:layout_constraintStart_toEndOf="@id/howItWorksIconBg"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/optionDescriptionText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="0dp"
+                            android:textSize="13sp"
+                            android:text="@string/instructions_summary"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/howItWorksChevron"
+                            app:layout_constraintStart_toEndOf="@id/howItWorksIconBg"
+                            app:layout_constraintTop_toBottomOf="@id/howItWorksTitleText" />
+
+                        <ImageView
+                            android:id="@+id/howItWorksChevron"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:alpha="0.4"
+                            android:src="@drawable/ic_arrow_forward"
+                            app:tint="?attr/colorOnSurface"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Divider -->
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp" />
+
+                    <!-- Option 2: View Source Code (GitHub) -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutSourceCode"
+                        style="@style/optionLayout"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="16dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/sourceCodeIconBg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp"
+                            app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                app:tint="?attr/colorOnPrimaryContainer"
+                                app:srcCompat="@drawable/ic_github" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/sourceCodeTitleText"
+                            style="@style/optionTitleText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="0dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:text="@string/view_source_code"
+                            app:layout_constraintEnd_toStartOf="@id/sourceCodeChevron"
+                            app:layout_constraintStart_toEndOf="@id/sourceCodeIconBg"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/optionDescriptionText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="0dp"
+                            android:textSize="13sp"
+                            android:text="@string/view_the_source_code_of_the_app"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/sourceCodeChevron"
+                            app:layout_constraintStart_toEndOf="@id/sourceCodeIconBg"
+                            app:layout_constraintTop_toBottomOf="@id/sourceCodeTitleText" />
+
+                        <ImageView
+                            android:id="@+id/sourceCodeChevron"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:alpha="0.4"
+                            android:src="@drawable/ic_arrow_forward"
+                            app:tint="?attr/colorOnSurface"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Divider -->
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp" />
+
+                    <!-- Option 3: Support the Project / Donate -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutDonate"
+                        style="@style/optionLayout"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="16dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/donateIconBg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp"
+                            app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                app:tint="?attr/colorOnPrimaryContainer"
+                                app:srcCompat="@drawable/ic_heart" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/donateTitleText"
+                            style="@style/optionTitleText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="0dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:text="@string/donate"
+                            app:layout_constraintEnd_toStartOf="@id/donateChevron"
+                            app:layout_constraintStart_toEndOf="@id/donateIconBg"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/optionDescriptionText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="0dp"
+                            android:textSize="13sp"
+                            android:text="@string/donate_subtitle"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/donateChevron"
+                            app:layout_constraintStart_toEndOf="@id/donateIconBg"
+                            app:layout_constraintTop_toBottomOf="@id/donateTitleText" />
+
+                        <ImageView
+                            android:id="@+id/donateChevron"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:alpha="0.4"
+                            android:src="@drawable/ic_arrow_forward"
+                            app:tint="?attr/colorOnSurface"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Divider -->
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp" />
+
+                    <!-- Option 4: About Developer & Socials -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutAbout"
+                        style="@style/optionLayout"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="16dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/aboutIconBg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp"
+                            app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                app:tint="?attr/colorOnPrimaryContainer"
+                                app:srcCompat="@drawable/ic_info" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/aboutTitleText"
+                            style="@style/optionTitleText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="0dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:text="@string/about_developer_title"
+                            app:layout_constraintEnd_toStartOf="@id/aboutChevron"
+                            app:layout_constraintStart_toEndOf="@id/aboutIconBg"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/optionDescriptionText"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="0dp"
+                            android:textSize="13sp"
+                            android:text="@string/about_developer_subtitle"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/aboutChevron"
+                            app:layout_constraintStart_toEndOf="@id/aboutIconBg"
+                            app:layout_constraintTop_toBottomOf="@id/aboutTitleText" />
+
+                        <ImageView
+                            android:id="@+id/aboutChevron"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:alpha="0.4"
+                            android:src="@drawable/ic_arrow_forward"
+                            app:tint="?attr/colorOnSurface"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
