@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="fastlane/metadata/android/en-US/images/icon.png" alt="CalenVault Logo" width="120" height="120">
+
 # 📅 CalenVault
 
 ### Disguised Calendar & Secure Private Vault for Android
@@ -93,6 +95,28 @@ CalenVault gives you three distinct methods to open your private vault right fro
 - **Screenshot Restriction (`FLAG_SECURE`)**: Prevent screenshots, screen recorders, and app switcher thumbnails from capturing your private vault content.
 - **Security Question Recovery**: Recover your vault password using a secret security question and answer.
 - **Isolated Storage**: Hidden files are secured inside the app's dedicated `.CalenVault` directory.
+
+---
+
+## 📱 Screenshots
+
+<div align="center">
+  <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/Screenshot_1.jpg" alt="CalenVault - Screen 1" width="32%">
+  <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/Screenshot_2.jpg" alt="CalenVault - Screen 2" width="32%">
+  <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/Screenshot_3.jpg" alt="CalenVault - Screen 3" width="32%">
+</div>
+<br>
+<div align="center">
+  <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/Screenshot_4.jpg" alt="CalenVault - Screen 4" width="32%">
+  <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/Screenshot_5.jpg" alt="CalenVault - Screen 5" width="32%">
+  <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/Screenshot_6.jpg" alt="CalenVault - Screen 6" width="32%">
+</div>
+<br>
+<div align="center">
+  <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/Screenshot_7.jpg" alt="CalenVault - Screen 7" width="32%">
+  <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/Screenshot_8.jpg" alt="CalenVault - Screen 8" width="32%">
+  <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/Screenshot_9.jpg" alt="CalenVault - Screen 9" width="32%">
+</div>
 
 ---
 

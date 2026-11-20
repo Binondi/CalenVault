@@ -38,3 +38,4 @@
 </ul>
 
 <p><b>Requirements:</b> Android 7.0 (API 24) or higher. Manage All Files permission required on Android 11+ for moving and hiding files across storage directories.</p>
+

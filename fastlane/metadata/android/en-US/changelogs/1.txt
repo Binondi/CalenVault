@@ -7,3 +7,4 @@
 - Shake-to-close vault with customizable sensitivity & haptic feedback
 - In-vault camera capture and secure notes editor
 - 100% offline with zero internet permissions
+
