@@ -1,0 +1,9 @@
+- Initial release of CalenVault
+- Full-featured Material 3 calendar with event scheduling & categories
+- Secret file vault for photos, videos, audio, documents, and notes
+- 3 stealth access triggers: search bar, header long-press, multi-tap today button
+- Military-grade AES-256-GCM encryption with custom key derivation
+- Disaster-proof CHFE container for safe reinstall recovery
+- Shake-to-close vault with customizable sensitivity & haptic feedback
+- In-vault camera capture and secure notes editor
+- 100% offline with zero internet permissions

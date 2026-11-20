@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/Binondi/CalenVault">
-    <img alt="Platform" src="https://img.shields.io/badge/Platform-Android%208.0%2B-3DDC84?logo=android&logoColor=white&style=for-the-badge">
+    <img alt="Platform" src="https://img.shields.io/badge/Platform-Android%207.0%2B-3DDC84?logo=android&logoColor=white&style=for-the-badge">
   </a>
   <a href="LICENSE">
     <img alt="License" src="https://img.shields.io/badge/License-GPL--3.0-blue?logo=gnu&style=for-the-badge">
@@ -16,6 +16,9 @@
   </a>
   <a href="https://github.com/Binondi/CalenVault">
     <img alt="Privacy" src="https://img.shields.io/badge/Privacy-100%25%20Offline-success?style=for-the-badge">
+  </a>
+  <a href="https://gitlab.com/IzzyOnDroid/repo">
+    <img alt="IzzyOnDroid" src="https://img.shields.io/badge/IzzyOnDroid-Compatible-orange?logo=f-droid&style=for-the-badge">
   </a>
 </p>
 

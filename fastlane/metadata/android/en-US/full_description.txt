@@ -1,0 +1,40 @@
+<p><b>CalenVault</b> is an open-source, privacy-focused Android application that seamlessly disguises a military-grade encrypted file vault behind a fully functional, modern <b>Calendar</b> interface.</p>
+
+<p>To anyone else, CalenVault looks and behaves like an elegant daily calendar for scheduling events, reminders, and appointments. With your secret trigger, it instantly reveals a stealth personal vault where you can securely store and protect your private photos, videos, audio recordings, documents, and notes.</p>
+
+<p><b>⭐ Covert Access Triggers:</b></p>
+<ul>
+<li><b>Search Bar Trigger:</b> Enter your secret passcode into the calendar event search bar and press search.</li>
+<li><b>Calendar Header Long-Press:</b> Long-press the Month and Year title on the calendar view.</li>
+<li><b>Multi-Tap Today Button:</b> Rapidly tap the "Today" navigation button 5 times.</li>
+<li><b>Fail-Safe Protection:</b> You can customize your active triggers in Vault Settings, while ensuring at least one trigger always remains active so you never lose access.</li>
+</ul>
+
+<p><b>🔒 Vault & Security Features:</b></p>
+<ul>
+<li><b>Multi-Type Storage:</b> Securely hide photos, videos, audio files, documents (PDF, DOC, ZIP), and encrypted notes.</li>
+<li><b>In-Vault Camera:</b> Capture confidential photos directly inside the vault without them ever touching your device's public photo gallery.</li>
+<li><b>AES-256-GCM Encryption:</b> Protect your data with industry-standard authenticated encryption and PBKDF2 (100,000 iterations) custom passphrase key derivation.</li>
+<li><b>Disaster-Proof Recovery (CHFE Container):</b> Encrypted files embed their original metadata internally, allowing complete recovery of file names and previews even after app reinstallation or data resets.</li>
+<li><b>Shake to Close Vault:</b> Instantly exit and lock the vault by shaking your phone, complete with configurable sensitivity and haptic vibration feedback.</li>
+<li><b>Screenshot Prevention (FLAG_SECURE):</b> Blocks screenshots, screen recorders, and recent app thumbnails from capturing your vault content.</li>
+<li><b>Security Question Recovery:</b> Built-in recovery mechanism in case you forget your passcode.</li>
+<li><b>Folder Management:</b> Create nested folders, rename, move, copy, and batch unhide files.</li>
+</ul>
+
+<p><b>📅 Calendar Features:</b></p>
+<ul>
+<li><b>Complete Event Management:</b> Create, edit, and categorize events with reminders and custom durations.</li>
+<li><b>Event Categories:</b> Color-coded categories including Work, Personal, Meeting, Birthday, Reminder, and Health.</li>
+<li><b>Customization:</b> Configure first day of week (Sunday, Monday, Saturday) and 12-hour/24-hour time formatting.</li>
+<li><b>Material 3 Design:</b> Clean edge-to-edge layout with full support for Light/Dark themes and dynamic wallpaper color (Material You).</li>
+</ul>
+
+<p><b>🛡️ 100% Offline & Private:</b></p>
+<ul>
+<li><b>Zero Internet Permissions:</b> The app does not request <code>android.permission.INTERNET</code>. Your files and encryption keys never leave your phone.</li>
+<li><b>No Tracking:</b> Zero third-party analytics, zero advertisements, zero remote telemetry.</li>
+<li><b>Open Source:</b> Transparent source code licensed under GNU GPL v3.0.</li>
+</ul>
+
+<p><b>Requirements:</b> Android 7.0 (API 24) or higher. Manage All Files permission required on Android 11+ for moving and hiding files across storage directories.</p>
