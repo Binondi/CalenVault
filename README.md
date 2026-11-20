@@ -2,7 +2,7 @@
 
 <img src="fastlane/metadata/android/en-US/images/icon.png" alt="CalenVault Logo" width="120" height="120">
 
-# 📅 CalenVault
+# CalenVault
 
 ### Disguised Calendar & Secure Private Vault for Android
 
@@ -18,9 +18,6 @@
   </a>
   <a href="https://github.com/Binondi/CalenVault">
     <img alt="Privacy" src="https://img.shields.io/badge/Privacy-100%25%20Offline-success?style=for-the-badge">
-  </a>
-  <a href="https://gitlab.com/IzzyOnDroid/repo">
-    <img alt="IzzyOnDroid" src="https://img.shields.io/badge/IzzyOnDroid-Compatible-orange?logo=f-droid&style=for-the-badge">
   </a>
 </p>
 
